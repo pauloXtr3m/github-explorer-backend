@@ -7,7 +7,7 @@ import {
 } from 'typeorm';
 
 @Entity('notifications')
-class Notes {
+class Note {
   @ObjectIdColumn()
   id: ObjectID;
 
@@ -24,4 +24,4 @@ class Notes {
   updated_at: Date;
 }
 
-export default Notes;
+export default Note;
