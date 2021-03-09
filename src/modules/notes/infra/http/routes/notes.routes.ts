@@ -16,4 +16,14 @@ notesRouter.post(
   notesController.create,
 );
 
+notesRouter.get(
+  '/:user_id',
+  celebrate({
+    [Segments.PARAMS]: {
+      user_id: Joi.string().required(),
+    },
+  }),
+  notesController.get,
+);
+
 export default notesRouter;
