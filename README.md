@@ -9,7 +9,7 @@ This project uses MongoDB to store the notes created in application
 ```docker run --name mongodb -p 27017:27017 -d -t mongo```
 
 ### Create redis container
-This project uses Redis as cache
+This project uses Redis to cache requests
 
 ```docker run --name redis -p 6379:6379 -d -t redis```
 
@@ -21,7 +21,7 @@ This project uses Redis as cache
 
 Rename the file `ormconfig.example.json` to `ormconfig.json`.
 
-If you created your databases with another configuration, you have to update this file. 
+If you have created your databases with another configuration, you have to update this file. 
 
 ### Run
 
