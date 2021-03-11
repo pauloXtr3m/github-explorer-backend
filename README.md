@@ -13,15 +13,19 @@ This project uses Redis to cache requests
 
 ```docker run --name redis -p 6379:6379 -d -t redis```
 
-### Download dependencies
+### Environment
 
-```yarn install```
+Rename `.env.example` file to `.env`.
 
 ### Setup orm
 
 Rename the file `ormconfig.example.json` to `ormconfig.json`.
 
 If you have created your databases with another configuration, you have to update this file. 
+
+### Download dependencies
+
+```yarn install```
 
 ### Run
 
