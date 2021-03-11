@@ -1,6 +1,21 @@
 # Github Explorer backend
 Backend of Github Explorer application
 
+## Routes
+###`POST /notes`
+Create a note
+
+Body params:
+```
+{
+    user_id: string;
+    content: string;
+}
+```
+
+###`GET /notes/:user_id`
+Get a list of notes created in that github `user_id`
+
 ## Setup
 
 ### Create docker container to run mongoDB

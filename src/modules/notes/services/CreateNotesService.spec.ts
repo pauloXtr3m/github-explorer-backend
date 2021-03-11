@@ -7,7 +7,7 @@ let fakeNotesRepository: FakeNotesRepository;
 let createNotesService: CreateNotesService;
 let cacheProvider: ICacheProvider;
 
-describe('CreateAppointment', () => {
+describe('CreateNotes', () => {
   beforeEach(() => {
     fakeNotesRepository = new FakeNotesRepository();
     cacheProvider = new FakeCacheProvider();
@@ -23,12 +23,12 @@ describe('CreateAppointment', () => {
 
     const note = await createNotesService.execute({
       user_id: 'user-id',
-      content: 'Mensagem de teste',
+      content: 'Testing message',
     });
 
     expect(note).toHaveProperty('id');
     expect(note.user_id).toBe('user-id');
-    expect(note.content).toBe('Mensagem de teste');
+    expect(note.content).toBe('Testing message');
     expect(note.created_at).toStrictEqual(new Date(2020, 4, 10, 12));
   });
 
